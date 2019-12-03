@@ -2282,12 +2282,8 @@
         "inherits": ["STM32F072xB"],
         "supported_form_factors": ["ARDUINO", "MORPHO"],
         "extra_labels_add": ["STM32F072RB"],
-        "config": {
-            "clock_source": {
-                "help": "Mask value : USE_PLL_HSE_EXTC | USE_PLL_HSE_XTAL (need HW patch) | USE_PLL_HSI",
-                "value": "USE_PLL_HSE_EXTC|USE_PLL_HSI",
-                "macro_name": "CLOCK_SOURCE"
-            }
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_EXTC|USE_PLL_HSI"
         },
         "detect_code": ["0730"],
         "device_name": "STM32F072RB"
@@ -2297,12 +2293,8 @@
         "extra_labels_add": ["STM32F072VB"],
         "device_name": "STM32F072VB",
         "supported_form_factors": [],
-        "config": {
-            "clock_source": {
-                "help": "Mask value : USE_PLL_HSE_EXTC | USE_PLL_HSE_XTAL | USE_PLL_HSI",
-                "value": "USE_PLL_HSE_XTAL|USE_PLL_HSI",
-                "macro_name": "CLOCK_SOURCE"
-            }
+        "overrides": {
+            "clock_source": "USE_PLL_HSE_EXTC|USE_PLL_HSI|USE_PLL_HSE_XTAL"
         },
         "device_has_add": [ "USBDEVICE" ]
       },
