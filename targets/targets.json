@@ -2280,6 +2280,33 @@
         "release_versions": ["2", "5"],
         "device_name": "STM32F072RB"
     },
+    "STM32072B_EVAL": {
+        "inherits": ["FAMILY_STM32"],
+        "core": "Cortex-M0",
+        "extra_labels_add": ["STM32F0","STM32F072VB"],
+        "device_name": "STM32F072VB",
+        "supported_form_factors": [],
+        "macros_add": [
+            "CMSIS_VECTAB_VIRTUAL",
+            "CMSIS_VECTAB_VIRTUAL_HEADER_FILE=\"cmsis_nvic.h\""
+        ],
+        "release_versions": ["5"],
+        "config": {
+            "clock_source": {
+                "help": "Mask value : USE_PLL_HSE_EXTC | USE_PLL_HSE_XTAL | USE_PLL_HSI",
+                "value": "USE_PLL_HSE_XTAL|USE_PLL_HSI",
+                "macro_name": "CLOCK_SOURCE"
+            }
+        },
+        "device_has_add": [
+            "ANALOGOUT",
+            "CAN",
+            "CRC",
+            "SERIAL_ASYNCH",
+            "FLASH",
+            "USBDEVICE"
+        ]
+      },
     "NUCLEO_F091RC": {
         "inherits": ["FAMILY_STM32"],
         "supported_form_factors": ["ARDUINO", "MORPHO"],
