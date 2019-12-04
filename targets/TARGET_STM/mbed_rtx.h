@@ -52,7 +52,7 @@
 #define INITIAL_SP              (0x20003000UL)
 
 #elif (defined(TARGET_STM32F070RB) ||\
-       defined(TARGET_STM32F072RB) ||\
+       defined(TARGET_STM32F072xB) ||\
        defined(TARGET_STM32F302R8))
 #define INITIAL_SP              (0x20004000UL)
 
@@ -140,7 +140,7 @@
 
 #endif // INITIAL_SP
 
-#if (defined(TARGET_STM32F070RB) || defined(TARGET_STM32F072RB))
+#if (defined(TARGET_STM32F070RB) || defined(TARGET_STM32F072xB))
 #ifdef MBED_CONF_RTOS_MAIN_THREAD_STACK_SIZE
 #undef MBED_CONF_RTOS_MAIN_THREAD_STACK_SIZE
 #endif
